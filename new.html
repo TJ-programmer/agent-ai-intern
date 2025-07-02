@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeStream - Music For Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Vibe<span>Stream</span></a>
+        <div class="search-bar">
+            <i class="search-icon">🔍</i>
+            <input type="text" placeholder="Search for artists, songs, or podcasts">
+        </div>
+        <div class="user-menu">
+            <button id="login-btn" class="hero-btn" style="padding: 8px 16px; font-size: 14px;">Log In</button>
+            <div class="user-profile">
+                <img src="assests/logo.png" alt="User Profile">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="nav-section">
+                <h3>Menu</h3>
+                <a href="#" class="nav-link active" data-page="home">
+                    <i>🏠</i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-link" data-page="explore">
+                    <i>🔍</i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-link" data-page="charts">
+                    <i>📊</i>
+                    <span>Charts</span>
+                </a>
+                <a href="#" class="nav-link" data-page="radio">
+                    <i>🎧</i>
+                    <span>Radio</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <h3>Library</h3>
+                <a href="#" class="nav-link" data-page="liked">
+                    <i>❤️</i>
+                    <span>Liked Songs</span>
+                </a>
+                <a href="#" class="nav-link" data-page="albums">
+                    <i>🎵</i>
+                    <span>Albums</span>
+                </a>
+                <a href="#" class="nav-link" data-page="artists">
+                    <i>🎤</i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-link" data-page="podcasts">
+                    <i>📱</i>
+                    <span>Podcasts</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <h3>Playlists</h3>
+                <div class="playlist-item" data-playlist="chill">
+                    <div class="playlist-cover"></div>
+                    <span>Chill Vibes</span>
+                </div>
+                <div class="playlist-item" data-playlist="workout">
+                    <div class="playlist-cover"></div>
+                    <span>Workout Mix</span>
+                </div>
+                <div class="playlist-item" data-playlist="party">
+                    <div class="playlist-cover"></div>
+                    <span>Party Anthems</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Pages Container -->
+            <div id="pages-container">
+                <!-- Home Page -->
+                <div class="page active" id="home-page">
+                    <!-- Hero Section -->
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Discover Your Next Favorite Track</h1>
+                            <p class="hero-subtitle">Unlimited music, podcasts, and playlists. Start your journey now.</p>
+                            <button class="hero-btn">
+                                <i>▶️</i>
+                                <span>Start Listening</span>
+                            </button>
+                        </div>
+                        <img src="assests/streaming.png" alt="Hero Image" class="hero-image">
+                    </div>
+
+                    <!-- Recently Played -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Recently Played</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="cards-grid">
+                            <div class="music-card" data-type="playlist" data-id="late-night">
+                                <div class="card-image"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Late Night Vibes</h3>
+                                    <p class="card-subtitle">Playlist • 2 hours</p>
+                                </div>
+                            </div>
+                            <div class="music-card" data-type="playlist" data-id="summer">
+                                <div class="card-image"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Summer Hits 2025</h3>
+                                    <p class="card-subtitle">Playlist • 1 hour</p>
+                                </div>
+                            </div>
+                            <div class="music-card" data-type="album" data-id="nostalgia">
+                                <div class="card-image"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Nostalgia Pop</h3>
+                                    <p class="card-subtitle">Album • 45 mins</p>
+                                </div>
+                            </div>
+                            <div class="music-card" data-type="playlist" data-id="lofi">
+                                <div class="card-image"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Chill Lofi Beats</h3>
+                                    <p class="card-subtitle">Playlist • 3 hours</p>
+                                </div>
+                            </div>
+                            <div class="music-card" data-type="playlist" data-id="discover">
+                                <div class="card-image"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">New Discoveries</h3>
+                                    <p class="card-subtitle">Generated • 50 mins</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- For You Section -->
+                    <div class="content-section for-you-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Made For You</h2>
+                            <a href="#" class="view-all">Refresh</a>
+                        </div>
+                        <div class="cards-grid">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Mood Section -->
+                    <div class="content-section mood-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Pick Your Mood</h2>
+                            <div class="mood-filters">
+                                <button class="mood-filter active">All</button>
+                                <button class="mood-filter">Upbeat</button>
+                                <button class="mood-filter">Chill</button>
+                                <button class="mood-filter">Focus</button>
+                            </div>
+                        </div>
+                        <div class="mood-grid">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Trending Now -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Trending Now</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="track-list">
+                            <div class="track-item" data-track="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                                <div class="track-number">1</div>
+                                <div class="track-image"></div>
+                                <div class="track-info">
+                                    <h3 class="track-title">Midnight Dreams</h3>
+                                    <p class="track-artist">Luna Nova</p>
+                                </div>
+                                <div class="track-duration">3:45</div>
+                                <div class="track-actions">
+                                    <button class="action-btn">❤️</button>
+                                    <button class="action-btn">➕</button>
+                                    <button class="action-btn">🔄</button>
+                                </div>
+                            </div>
+                            <div class="track-item" data-track="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                                <div class="track-number">2</div>
+                                <div class="track-image"></div>
+                                <div class="track-info">
+                                    <h3 class="track-title">Electric Emotions</h3>
+                                    <p class="track-artist">Neon Pulse</p>
+                                </div>
+                                <div class="track-duration">4:12</div>
+                                <div class="track-actions">
+                                    <button class="action-btn">❤️</button>
+                                    <button class="action-btn">➕</button>
+                                    <button class="action-btn">🔄</button>
+                                </div>
+                            </div>
+                            <div class="track-item" data-track="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                                <div class="track-number">3</div>
+                                <div class="track-image"></div>
+                                <div class="track-info">
+                                    <h3 class="track-title">Sunset Boulevard</h3>
+                                    <p class="track-artist">Coastal Vibes</p>
+                                </div>
+                                <div class="track-duration">3:28</div>
+                                <div class="track-actions">
+                                    <button class="action-btn">❤️</button>
+                                    <button class="action-btn">➕</button>
+                                    <button class="action-btn">🔄</button>
+                                </div>
+                            </div>
+                            <div class="track-item" data-track="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">
+                                <div class="track-number">4</div>
+                                <div class="track-image"></div>
+                                <div class="track-info">
+                                    <h3 class="track-title">Crystal Clear</h3>
+                                    <p class="track-artist">Echo Wave</p>
+                                </div>
+                                <div class="track-duration">3:56</div>
+                                <div class="track-actions">
+                                    <button class="action-btn">❤️</button>
+                                    <button class="action-btn">➕</button>
+                                    <button class="action-btn">🔄</button>
+                                </div>
+                            </div>
+                            <div class="track-item" data-track="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3">
+                                <div class="track-number">5</div>
+                                <div class="track-image"></div>
+                                <div class="track-info">
+                                    <h3 class="track-title">Digital Daydream</h3>
+                                    <p class="track-artist">Virtual Horizon</p>
+                                </div>
+                                <div class="track-duration">4:05</div>
+                                <div class="track-actions">
+                                    <button class="action-btn">❤️</button>
+                                    <button class="action-btn">➕</button>
+                                    <button class="action-btn">🔄</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explore Page -->
+                <div class="page" id="explore-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Explore New Music</h1>
+                            <p class="hero-subtitle">Discover new artists, genres, and playlists curated just for you.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Genres Section -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Browse by Genre</h2>
+                        </div>
+                        <div class="cards-grid">
+                            <!-- Genres will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Featured Section -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Featured Playlists</h2>
+                        </div>
+                        <div class="featured-grid">
+                            <!-- Featured playlists will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Page -->
+                <div class="page" id="charts-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Top Charts</h1>
+                            <p class="hero-subtitle">See what's trending in your area and worldwide.</p>
+                        </div>
+                    </div>
+
+                    <!-- Global Charts -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Global Top Charts</h2>
+                        </div>
+                        <div id="global-charts" class="charts-list">
+                            <!-- Global charts will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Local Charts -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Local Trending</h2>
+                        </div>
+                        <div id="local-charts" class="charts-list">
+                            <!-- Local charts will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radio Page -->
+                <div class="page" id="radio-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Live Radio</h1>
+                            <p class="hero-subtitle">Listen to live radio stations from around the world.</p>
+                        </div>
+                    </div>
+
+                    <!-- Popular Stations -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Popular Stations</h2>
+                        </div>
+                        <div class="cards-grid">
+                            <!-- Radio stations will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Genre Stations -->
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Browse by Genre</h2>
+                        </div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Electronic</span>
+                            <span class="genre-tag">Rock</span>
+                            <span class="genre-tag">Hip Hop</span>
+                            <span class="genre-tag">Jazz</span>
+                            <span class="genre-tag">Classical</span>
+                            <span class="genre-tag">Pop</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="liked-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Liked Songs</h1>
+                            <p class="hero-subtitle">Your favorite tracks all in one place.</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <div id="liked-songs-list" class="track-list">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="albums-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Your Albums</h1>
+                            <p class="hero-subtitle">Browse your saved albums and collections.</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <div class="cards-grid">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="artists-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Your Artists</h1>
+                            <p class="hero-subtitle">Check out your favorite artists.</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <div class="cards-grid">
+                            <!-- Add artists -->
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="podcasts-page">
+                    <div class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title">Podcasts</h1>
+                            <p class="hero-subtitle">Listen to your favorite shows and discover new ones.</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <div class="cards-grid">
+                            <!-- Add podcasts -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="player">
+        <div class="now-playing">
+            <div class="now-playing-image"></div>
+            <div class="now-playing-info">
+                <h4 class="now-playing-title">Select a track</h4>
+                <p class="now-playing-artist">-</p>
+            </div>
+            <button class="action-btn">❤️</button>
+        </div>
+        <div class="player-controls">
+            <div class="controls-buttons">
+                <button class="control-btn" id="shuffle-btn">🔀</button>
+                <button class="control-btn" id="prev-btn">⏮️</button>
+                <button class="play-btn" id="play-btn">▶️</button>
+                <button class="control-btn" id="next-btn">⏭️</button>
+                <button class="control-btn" id="repeat-btn">🔁</button>
+            </div>
+            <div class="progress-container">
+                <span class="time current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span class="time total-time">0:00</span>
+            </div>
+        </div>
+        <div class="player-options">
+            <button class="control-btn" id="lyrics-btn">📜</button>
+            <button class="control-btn" id="queue-btn">📱</button>
+            <div class="volume-container">
+                <button class="control-btn" id="volume-btn">🔊</button>
+                <div class="volume-bar">
+                    <div class="volume"></div>
+                </div>
+            </div>
+        </div>
+       
+        <audio id="audio-player"></audio>
+    </div>
+
+    
+    <div class="auth-modal" id="auth-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">VibeStream</h2>
+                <p>Your Music, Your Vibe</p>
+            </div>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="login">Log In</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+            <div class="tab-content" id="login-tab">
+                <div class="form-group">
+                    <label class="form-label">Email or Username</label>
+                    <input type="text" class="form-input" placeholder="Enter your email or username">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Enter your password">
+                </div>
+                <button class="auth-btn">Log In</button>
+                <div class="social-auth">
+                    <p class="social-auth-text">Or log in with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn">G</button>
+                        <button class="social-btn">f</button>
+                        <button class="social-btn">in</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="signup-tab" style="display: none;">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-input" placeholder="Choose a username">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password" class="form-input" placeholder="Confirm your password">
+                </div>
+                <button class="auth-btn">Sign Up</button>
+                <div class="social-auth">
+                    <p class="social-auth-text">Or sign up with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn">G</button>
+                        <button class="social-btn">f</button>
+                        <button class="social-btn">in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert alert-success" id="alert">
+        <i>✅</i>
+        <span>Alert message here</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
